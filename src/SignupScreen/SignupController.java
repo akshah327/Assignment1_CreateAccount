@@ -3,7 +3,7 @@ package SignupScreen;
 import Model.User;
 import Model.UserDB;
 import Model.UserIO;
-import javafx.collections.ObservableList;
+import javafx.collections.ObservableList; //Used in the validate methods that check for blanks
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;

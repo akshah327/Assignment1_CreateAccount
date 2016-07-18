@@ -5,7 +5,7 @@ import java.io.*;
 /**
  * Created by anujshah on 6/30/16.
  */
-public class UserIO
+public class UserIO<T>
 {
     public static void writeUsers(Object data) throws IOException
     {

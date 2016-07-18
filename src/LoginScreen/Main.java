@@ -1,13 +1,15 @@
 package LoginScreen;
 
-import Model.User;
-import Model.UserDB;
-import Model.UserIO;
-import javafx.application.Application;
+import Model.User; //Used in loading ArrayList of established users
+import Model.UserDB; //Same as above
+import Model.UserIO; //Same as above
+import javafx.application.Application; //allows main class to inherit from parent Application
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import utils.LinkedListOrderedList;
+import utils.LinkedListStack;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -30,7 +32,7 @@ public class Main extends Application
     {
         try
         {
-            UserDB.setUsers((ArrayList< User>)UserIO.readUsers());
+            UserDB.setUsers((LinkedListOrderedList<User>)UserIO.readUsers());
         }
         catch (IOException e)
         {

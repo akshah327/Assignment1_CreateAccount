@@ -1,8 +1,11 @@
 package Model;
 
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+
 import java.io.Serializable;
 
-public class User extends Person implements Serializable
+public class User extends Person implements Serializable, Comparable<User>
 {
     private String username;
     private String password;
@@ -29,6 +32,12 @@ public class User extends Person implements Serializable
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.photo = photo;
+    }
+
+    public User(String username, String password)
+    {
+        this.username = username;
+        this.password = password;
     }
 
     public String getUsername()
@@ -91,5 +100,18 @@ public class User extends Person implements Serializable
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", photo='" + photo + '\'' +
                 '}';
+    }
+
+    public boolean equals (User other)
+    {
+        return (this.username.equals(other.username));
+    }
+
+    @Override
+    public int compareTo(User other)
+    {
+        return (this.username.compareTo(other.username));
+
+        //Standard compareTo returns -1, 0, or 1 to represent relationship to object in parameter
     }
 }
