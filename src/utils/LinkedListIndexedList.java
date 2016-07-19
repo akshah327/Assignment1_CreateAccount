@@ -321,7 +321,7 @@ public class LinkedListIndexedList<T extends Comparable<T>> implements Interface
 
     @Override
     public boolean contains(T element)
-    {//Efficiency =
+    {
         reset();
         found = false;
         while (current != null)
@@ -335,6 +335,7 @@ public class LinkedListIndexedList<T extends Comparable<T>> implements Interface
             {
                 previous = current;
                 current = current.getPointer();
+                location++;
             }
         }
         return found;
@@ -512,6 +513,7 @@ public class LinkedListIndexedList<T extends Comparable<T>> implements Interface
     {
         current = head;
         previous = null;
+        location = 0;
     }
 
 

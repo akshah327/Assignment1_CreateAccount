@@ -176,10 +176,4 @@ public class ArrayIndexedListTest
         assertEquals("size method failed", "Calvin", list.getNext());
     }
 
-//    @Test
-//    public String toString()
-//    {
-//
-//    }
-
 }

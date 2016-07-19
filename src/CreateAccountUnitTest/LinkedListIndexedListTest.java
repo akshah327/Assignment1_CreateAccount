@@ -12,7 +12,6 @@ public class LinkedListIndexedListTest
 {
     public static final String EXPECTED_STRING_ADD = "List:\n Calvin\n Andrew\n Bobby\n David\n";
     public static final String EXPECTED_STRING_SET = "List:\n Calvin\n Andrew\n Bobby\n Evan\n";
-    public static final String EXPECTED_STRING_REMOVE = "List:\n Calvin\n Andrew\n Evan\n";
 
     @Test
     public void add() throws Exception

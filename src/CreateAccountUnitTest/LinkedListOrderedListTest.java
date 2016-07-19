@@ -108,7 +108,15 @@ public class LinkedListOrderedListTest
     @Test
     public void reset() throws Exception
     {
-
+        LinkedListOrderedList list = new LinkedListOrderedList();
+        assertEquals("size method failed", 0, list.size());
+        list.add("Calvin");
+        list.add("Bobby");
+        list.add("David");
+        list.add("Andrew");
+        System.out.println("List after add x 4: " + list);
+        list.reset();
+        assertEquals("size method failed", "Andrew", list.getNext());
     }
 
 }

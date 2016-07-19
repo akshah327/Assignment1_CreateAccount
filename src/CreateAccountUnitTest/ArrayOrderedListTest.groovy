@@ -109,7 +109,14 @@ class ArrayOrderedListTest<T>
     @Test
     void testReset()
     {
-
+        ArrayOrderedList list = new ArrayOrderedList();
+        list.add("Andrew");
+        list.add("Bobby");
+        list.add("Calvin");
+        list.add("David");
+        System.out.println("After add x 4: " + list);
+        list.reset();
+        assertEquals("getNext method failed", "Andrew", list.getNext());
     }
 
     @Test
