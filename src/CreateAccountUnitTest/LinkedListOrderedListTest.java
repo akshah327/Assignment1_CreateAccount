@@ -87,7 +87,7 @@ public class LinkedListOrderedListTest
         list.add("David");
         list.add("Andrew");
         System.out.println("List after add x 4: " + list);
-        assertEquals("size method failed", "Andrew", list.get("Andrew"));
+        assertEquals("get method failed", "Andrew", list.get("Andrew"));
     }
 
     @Test

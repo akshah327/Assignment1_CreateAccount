@@ -10,6 +10,12 @@ public class LinkedListNode<T> implements Serializable
     private T element;
     LinkedListNode pointer;
 
+    public LinkedListNode()
+    {
+        this.element = null;
+        this.pointer = null;
+    }
+
     public LinkedListNode(T element)
     {
         this.element = element;

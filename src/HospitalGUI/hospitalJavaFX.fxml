@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="607.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HospitalGUI.HospitalListController">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            <children>
+                <TextField fx:id="searchKey" onAction="#handleEnterPressed" layoutX="14.0" layoutY="25.0" prefHeight="25.0" prefWidth="542.0" />
+                <Label layoutX="556.0" layoutY="21.0" prefHeight="31.0" prefWidth="56.0" text="Search" />
+            </children>
+        </AnchorPane>
+          <TableView fx:id="hospitalTable" layoutX="5.0" layoutY="69.0" prefHeight="317.0" prefWidth="598.0">
+              <columns>
+                  <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Name" />
+                  <TableColumn fx:id="streetAddressColumn" prefWidth="75.0" text="Street Address" />
+                  <TableColumn fx:id="cityColumn" prefWidth="75.0" text="City" />
+                  <TableColumn fx:id="stateColumn" prefWidth="75.0" text="State" />
+                  <TableColumn fx:id="zipColumn" prefWidth="75.0" text="Zip" />
+                  <TableColumn fx:id="latitudeColumn" prefWidth="75.0" text="Latitude" />
+                  <TableColumn fx:id="longitudeColumn" prefWidth="75.0" text="Longitude" />
+                  <TableColumn fx:id="phoneNoColumn" prefWidth="75.0" text="Phone Number" />
+                  <TableColumn fx:id="photoColumn" prefWidth="75.0" text="Photo" />
+              </columns>
+          </TableView>
+</AnchorPane>

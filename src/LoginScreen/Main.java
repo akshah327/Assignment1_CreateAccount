@@ -32,7 +32,7 @@ public class Main extends Application
     {
         try
         {
-            UserDB.setUsers((LinkedListOrderedList<User>)UserIO.readUsers());
+            UserDB.setUsers((ArrayList<User>)UserIO.readUsers());
         }
         catch (IOException e)
         {

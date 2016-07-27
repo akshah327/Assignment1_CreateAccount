@@ -1,6 +1,6 @@
 package LoginScreen;
 
-import LoginSuccessful.LoginSuccessfulView; //allows us to instantiate a view of the LoginSuccessful screen
+import HospitalGUI.HospitalView;
 import Model.User;
 import Model.UserDB; //allows access to the ArrayList created to store users
 import SignupScreen.SignupView; //allows us to instantiate a view of the Signup screen
@@ -38,30 +38,59 @@ public class LoginController
      *
      * @throws IOException
      */
-    public void confirmEntry() throws IOException
+
+    boolean exist=false;
+    public void confirmEntry()
     {
-        //for (int i = 0; i < UserDB.getUsers().size(); i++)
-        User userFromInput = new User(username.getText(),password.getText());
-        System.out.println("User From Input");
-        System.out.println(userFromInput);
-        User userFromDB = UserDB.getUsers().get(userFromInput);
-        System.out.println("User From DB");
-        System.out.println(userFromDB);
-        if(userFromDB!=null)
+        for(int i=0; i<UserDB.getUsers().size(); i++)
         {
-            if (userFromDB.getUsername().equals(userFromInput.getUsername())
-                    && userFromDB.getPassword().equals(userFromInput.getPassword()))
+            if (username.getText().equals(UserDB.getUsers().get(i).getUsername()) &&
+                    password.getText().equals(UserDB.getUsers().get(i).getPassword()))
             {
-                new LoginSuccessfulView();
+                System.out.println("Welcome " +username.getText());
+                try
+                {
+                    new HospitalView();
+                }
+                catch (IOException e)
+                {
+                    System.err.println("Error opening hospital list view!");
+                    e.printStackTrace();
+                }
+                exist = true;
             }
             else
             {
                 invalidInput.setText("Invalid username and/or password. Please try again.");
             }
-        } else {
-            invalidInput.setText("Username does not exist. Please try again, or sign up.");
-            System.out.println(UserDB.getUsers());
         }
 
     }
 }
+
+//    public void confirmEntry() throws IOException
+//    {
+//        //for (int i = 0; i < UserDB.getUsers().size(); i++)
+//        User userFromInput = new User(username.getText(),password.getText());
+//        System.out.println("User From Input");
+//        System.out.println(userFromInput);
+//        User userFromDB = UserDB.getUsers().get(userFromInput);
+//        System.out.println("User From DB");
+//        System.out.println(userFromDB);
+//        if(userFromDB!=null)
+//        {
+//            if (userFromDB.getUsername().equals(userFromInput.getUsername())
+//                    && userFromDB.getPassword().equals(userFromInput.getPassword()))
+//            {
+//                new HospitalView();
+//            }
+//            else
+//            {
+//                invalidInput.setText("Invalid username and/or password. Please try again.");
+//            }
+//        } else {
+//            invalidInput.setText("Username does not exist. Please try again, or sign up.");
+//            System.out.println(UserDB.getUsers());
+//        }
+//
+//    }

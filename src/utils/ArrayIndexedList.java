@@ -1,6 +1,16 @@
+
+package utils;
+
+import Exceptions.elementNotFoundException;
+
+import java.util.Arrays;
+
+
 /**
+ *  @author Anuj Shah
+ *
  * Class: ArrayIndexedList
- * Author: Anuj Shah
+ *  Anuj Shah
  *
  * Purpose: The ArrayIndexedList class provides methods and instance variables
  * for creating an array-based and unbounded indexed list. Elements are added
@@ -36,15 +46,8 @@
  *  - private int current
  *  - private boolean found
  *  - private int location
- *
+ * @param <T>
  */
-
-package utils;
-
-import Exceptions.elementNotFoundException;
-
-import java.util.Arrays;
-
 public class ArrayIndexedList<T> implements IArrayIndexedList<T>
 {
 
@@ -113,6 +116,10 @@ public class ArrayIndexedList<T> implements IArrayIndexedList<T>
     |
      -------------------------------------------------------------------*/
 
+    /**
+     * jjdjfjdajkflda;fjk
+     * @param originalLimit
+     */
     public ArrayIndexedList(int originalLimit)
     {
         list = (T[]) new Object[originalLimit];
@@ -483,6 +490,10 @@ public class ArrayIndexedList<T> implements IArrayIndexedList<T>
         return nextElement;
     }
 
+    /**
+     *
+     *
+     */
 
     /*-------------------------------------------------------------------
     | Method: reset()
@@ -509,7 +520,7 @@ public class ArrayIndexedList<T> implements IArrayIndexedList<T>
     }
 
 
-    /*-------------------------------------------------------------------
+    /**-------------------------------------------------------------------
     | Method: toString()
     |
     | Efficiency: O(N)

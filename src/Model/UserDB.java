@@ -10,14 +10,14 @@ import java.util.ArrayList;
  */
 public class UserDB
 {
-    private static LinkedListOrderedList<User> users = new LinkedListOrderedList<>();
+    private static ArrayList<User> users = new ArrayList<>();
 
-    public static LinkedListOrderedList<User> getUsers()
+    public static ArrayList<User> getUsers()
     {
         return users;
     }
 
-    public static void setUsers(LinkedListOrderedList<User> users)
+    public static void setUsers(ArrayList<User> users)
     {
         UserDB.users = users;
     }

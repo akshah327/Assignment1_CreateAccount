@@ -244,7 +244,7 @@ public class LinkedListOrderedList<T extends Comparable<T>>
     @Override
     public boolean contains(T element)
     {
-        reset();
+        //reset();
         current = head;
         found = false;
         while (current != null)
